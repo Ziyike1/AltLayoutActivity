@@ -14,7 +14,12 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val layoutResId = if (resources.configuration.smallestScreenWidthDp >= 600) {
+            R.layout.alt_layout
+        } else {
+            R.layout.activity_main
+        }
+        setContentView(layoutResId)
 
         findViewById<ImageView>(R.id.profile_photo).setImageResource(R.drawable.istockphoto)
 
