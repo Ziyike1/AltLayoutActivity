@@ -11,8 +11,10 @@
         android:id="@+id/profile_photo"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginEnd="180dp"
         android:scaleType="center"
-        tools:layout_editor_absoluteY="-8dp"
+        app:layout_constraintEnd_toStartOf="@+id/directReportsRecyclerView"
+        tools:layout_editor_absoluteY="3dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -105,8 +107,8 @@
         android:id="@+id/directReportsLabel"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="4dp"
         android:paddingTop="8dp"
         android:text="Direct Reports"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -117,7 +119,8 @@
         android:id="@+id/directReportsRecyclerView"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginStart="120dp"
         app:layout_constraintStart_toEndOf="@+id/department"
-        tools:layout_editor_absoluteY="601dp" />
+        tools:layout_editor_absoluteY="465dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
